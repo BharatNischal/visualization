@@ -1,0 +1,25 @@
+#header{
+	background-color: #07263b;
+	padding: 3%;
+}
+iframe{
+	height: 100%;
+	width: 100%;
+	border: none;
+}
+#header h1{
+	color: #8AF3FF;
+	font-size: 3em;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+#description{
+	font-family: 'Source Sans Pro', sans-serif;
+	color: white;
+	line-height: 1.8;
+}
+
+p{
+	box-sizing: border-box;
+	line-height: 1.5;
+}
