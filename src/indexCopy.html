@@ -16,8 +16,10 @@
   <script src="js/exporting.js"></script>
   <script src="js/export-data.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="css/materialize.css" type="text/css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
   <!--<script src="../../dist/force-graph.js"></script>-->
 </head>
 
@@ -49,17 +51,12 @@
       <div class="col-sm-2">
         <div class="input-field" id="nodeType">
 
-          <!-- <select id="typeOfNodes">
-            <option value="1" selected>Both</option>
-            <option value="2">Nodes as source for selected node</option>
-            <option value="3">Nodes as destination for selected node</option>
-          </select> -->
-          <input list="options" id="typeOfNodes" name="nodeid" placeholder="Filtered nodes category">
-          <datalist id="options">
-            <option value="Both" default>
-            <option value="Nodes with selected node as source"/>
-            <option value="Nodes with selected node as destination"/>
-          </datalist>
+          <select id="typeOfNodes">
+            <option value="Both">Both</option>
+            <option value="Nodes with selected node as source">Nodes with selected node as source</option>
+            <option value="Nodes with selected node as destination">Nodes with selected node as destination</option>
+          </select>
+          <label>Filtered nodes category</label>
         </div>
       </div>
       <div class="col-sm-2 input-field">
@@ -377,7 +374,11 @@
         select.style.display = "block";
       }
     })
-
+  
+    $(document).ready(function(){
+      $('select').formSelect();
+    });
+    
   </script>
 </body>
 </html>
